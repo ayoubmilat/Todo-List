@@ -81,7 +81,7 @@ export default function ToDoList(){
 
     //Side Effect
     useEffect(() => {
-        const todosFromLocalStorage = JSON.parse(localStorage.getItem("todos"))
+        const todosFromLocalStorage = JSON.parse(localStorage.getItem("todos")) ?? []
         setTodos(todosFromLocalStorage)
     }, [])
 
